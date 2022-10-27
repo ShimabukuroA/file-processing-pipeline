@@ -1,0 +1,47 @@
+version: '3'
+services:
+  jupyterlab:
+    image: jupyterlab:latest
+    container_name: jupyterlab
+    ports:
+      - 8888:8888
+    volumes:
+      - ./data:/opt/sandbox/data
+      - ./src:/opt/sandbox/src
+  spark-master:
+    image: spark_master:latest
+    container_name: spark_master
+    ports:
+      - 8080:8080
+      - 7077:7077
+    volumes:
+      - ./data:/opt/sandbox/data
+      - ./src:/opt/sandbox/src
+  spark-worker-1:
+    image: spark_worker:latest
+    container_name: spark_worker_1
+    ports:
+      - 8081:8081
+    depends_on:
+      - spark-master
+    environment:
+      MASTER_PORT_7077_TCP_ADDR: "spark://spark-master"
+      MASTER_PORT_7077_TCP_PORT: "7077"
+      SPARK_WORKER_MEMORY: "512m"
+    volumes:
+      - ./data:/opt/sandbox/data
+      - ./src:/opt/sandbox/src
+  spark-worker-2:
+    image: spark_worker:latest
+    container_name: spark_worker_2
+    ports:
+      - 8082:8081
+    depends_on:
+      - spark-master
+    environment:
+      MASTER_PORT_7077_TCP_ADDR: "spark://spark-master"
+      MASTER_PORT_7077_TCP_PORT: "7077"
+      SPARK_WORKER_MEMORY: "512m"
+    volumes:
+      - ./data:/opt/sandbox/data
+      - ./src:/opt/sandbox/src
