@@ -57,7 +57,7 @@ The following table list tasks to do for the project.
 ## Solution <a name="solution"></a>
 
 ### High Level Design Solution <a name="hld"></a>
-![Alt text](https://github.com/ShimabukuroA/file-processing-pipeline/blob/feature/TASK-01/docs/hld_solution.svg)
+![Alt text](https://github.com/ShimabukuroA/file-processing-pipeline/blob/feature/TASK-02/docs/hld_solution.svg)
 
 ### Overview <a name="overview"></a>
 The solution consists of 3 components:
