@@ -50,7 +50,7 @@ We are a going to process a sample of events dumped in files and write to an out
 The following table list tasks to do for the project.
 | ID | Description | Status | Commit |
 |------------|-------------|-------------|-------------|
-|TASK-01|High Level Design for the solution|<mark>**DONE**</mark>|[Commit link](https://github.com/ShimabukuroA/file-processing-pipeline/blob/develop/docs/hld_solution.svg)|
+|TASK-01|High Level Design for the solution|<mark>**DONE**</mark>|[Commit link](https://github.com/ShimabukuroA/file-processing-pipeline/commit/cbe75647bda48033f6356213299a8b3d85d84e9f)|
 |TASK-02|Implement Docker environment to run the job|<mark>**DONE**</mark>|[Commit link](https://github.com/ShimabukuroA/file-processing-pipeline/commit/ac1638224eeaf80a266fcd7cb902b3c0d9ef5c6c)|
 |TASK-03|Implement the Pyspark job|<mark>**DOING**</mark>||
 
