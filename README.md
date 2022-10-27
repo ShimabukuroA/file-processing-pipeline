@@ -51,13 +51,13 @@ The following table list tasks to do for the project.
 | ID | Description | Status | Commit |
 |------------|-------------|-------------|-------------|
 |TASK-01|High Level Design for the solution|<mark>**DONE**</mark>|[Commit link](https://github.com/ShimabukuroA/file-processing-pipeline/blob/develop/docs/hld_solution.svg)|
-|TASK-02|Implement Docker environment to run the job|<mark>**TO DO**</mark>||
-|TASK-03|Implement the Pyspark job|<mark>**TO DO**</mark>||
+|TASK-02|Implement Docker environment to run the job|<mark>**DONE**</mark>||
+|TASK-03|Implement the Pyspark job|<mark>**DOING**</mark>||
 
 ## Solution <a name="solution"></a>
 
 ### High Level Design Solution <a name="hld"></a>
-![Alt text](https://github.com/ShimabukuroA/file-processing-pipeline/blob/feature/TASK-02/docs/hld_solution.svg)
+![Alt text](https://github.com/ShimabukuroA/file-processing-pipeline/blob/develop/docs/hld_solution.svg)
 
 ### Overview <a name="overview"></a>
 The solution consists of 3 components:
