@@ -22,8 +22,8 @@
 
 ## Introduction <a name="introduction"></a>
 
-The content of this repository has the purpose to demonstrate a solution to perform a processing of events that are stored in files.  
-For this scenario, we expect that each event follow a well-defined schema described bellow. Here is an example of event payload that our pipeline is going to process:
+The content of this repository has the purpose to demonstrate a solution to perform a processing of events that are stored in files described in Pismo Data Engineer Challenge.  
+For the proposed scenario, we expect that each event follow a well-defined schema described bellow. Here is an example of event payload that our pipeline is going to process:
 
 ```json
 {
@@ -59,7 +59,7 @@ The following table list tasks to do for the project.
 |TASK-01|High Level Design for the solution|<mark>**DONE**</mark>|[Commit link](https://github.com/ShimabukuroA/file-processing-pipeline/commit/cbe75647bda48033f6356213299a8b3d85d84e9f)|
 |TASK-02|Implement Docker environment to run the job|<mark>**DONE**</mark>|[Commit link](https://github.com/ShimabukuroA/file-processing-pipeline/commit/ac1638224eeaf80a266fcd7cb902b3c0d9ef5c6c)|
 |TASK-03|Implement the Pyspark job|<mark>**DONE**</mark>|[Commit link](https://github.com/ShimabukuroA/file-processing-pipeline/commit/63d9ec48f20b7f4ea9ae5ced9bd5f27ac9374f9c)|
-|TASK-04|Finish documentation|<mark>**TO DO**</mark>||
+|TASK-04|Finish documentation|<mark>**DOING**</mark>||
 
 ## Solution <a name="solution"></a>
 
@@ -95,10 +95,18 @@ https://github.com/ShimabukuroA/file-processing-pipeline/blob/942997736b5218f573
 https://github.com/ShimabukuroA/file-processing-pipeline/blob/942997736b5218f573e5e2372f909a49fd04388f/docker/builds/spark-master/Dockerfile#L1-L7
 #### Spark worker image
 https://github.com/ShimabukuroA/file-processing-pipeline/blob/942997736b5218f573e5e2372f909a49fd04388f/docker/builds/spark-worker/Dockerfile#L1-L7
-### Build the Docker images <a name="build"></a>
-### Start containers <a name="start"></a>
-### Spark job <a name="job"></a>
 
+### Build the Docker images <a name="build"></a>
+A shell script was developed to build all images at once.
+https://github.com/ShimabukuroA/file-processing-pipeline/blob/6e494533a82c0e6922e46a8350ca84cfe7e603a6/docker/build_containers_image.sh#L1-L37
+
+### Start containers <a name="start"></a>
+The Docker compose file describes how to deploy the containers. We will create the JupyterLab and Spark cluster containers, define a expose their ports for network connection and share the volume between them.  
+https://github.com/ShimabukuroA/file-processing-pipeline/blob/6e494533a82c0e6922e46a8350ca84cfe7e603a6/docker/docker-compose.yml#L1-L47
+
+### Spark job <a name="job"></a>
+With our JupyterLab IDE and Spark cluster up, we can run a pyspark job to process some data. A notebook was developed to guide through the steps that the job performs to process the events.  
+https://github.com/ShimabukuroA/file-processing-pipeline/blob/6e494533a82c0e6922e46a8350ca84cfe7e603a6/docker/docker-compose.yml#L1-L47
 ## How to Run <a name="how2run"></a>
 
 
