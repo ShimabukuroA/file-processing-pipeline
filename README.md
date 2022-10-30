@@ -175,7 +175,7 @@ https://github.com/ShimabukuroA/file-processing-pipeline/blob/6e494533a82c0e6922
 
 ### Spark job <a name="job"></a>
 With our JupyterLab IDE and Spark cluster up, we can run a pyspark job to process some data. A notebook was developed to guide through the steps that the job performs to process the events.  
-The notebook source code is located in **docker/src folder** in this repo.
+The notebook's source code is located in **docker/src folder** in this repo.
 
 ## How to run <a name="how2run"></a>
 1. You will need Docker installed in your machine. You also need to be able to run shell scripts and docker/docker-compose command line.
