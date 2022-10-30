@@ -21,7 +21,7 @@
 1. You will need Docker installed in your machine. You also need to be able to run shell scripts and docker/docker-compose command line.
 2. Clone the repo:  
 ```git clone https://github.com/ShimabukuroA/file-processing-pipeline.git```
-3. Build the Docker images(you may need to give execution permission to execute this shell)  
+3. Build the Docker images(you may need to give execution permission to execute this shell). It may take a few minutes.  
 ```cd docker && sh build_container_image.sh```  
 4. Run the containers. Wait until all the containers are started.  
 ```docker-compose up -d```  
@@ -181,7 +181,7 @@ The notebook's source code is located in **docker/src folder** in this repo.
 1. You will need Docker installed in your machine. You also need to be able to run shell scripts and docker/docker-compose command line.
 2. Clone the repo:  
 ```git clone https://github.com/ShimabukuroA/file-processing-pipeline.git```
-3. Build the Docker images(you may need to give execution permission to execute this shell)  
+3. Build the Docker images(you may need to give execution permission to execute this shell). It may take a few minutes.  
 ```cd docker && sh build_container_image.sh```  
 4. Run the containers. Wait until all the containers are started.  
 ```docker-compose up -d```  
