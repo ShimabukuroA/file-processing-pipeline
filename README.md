@@ -8,7 +8,13 @@
     - [High Level Design Solution](#hld)
     - [Overview](#overview)
 4. [Implementation](#implementation)
+    - [Create the Docker images](#create)
+    - [Build the Docker images](#build)
+    - [Start containers](#start)
+    - [Spark job](#job)
 5. [How to run](#how2run)
+    - [Tools](#tools)
+    - [Commands](#cmds)
 6. [Results](#results)
 7. [References](#references)
 
@@ -68,7 +74,30 @@ The solution consists of 3 components:
 
 The components will be created within a Docker environment where source code and data will be mounted in a shared volume(1) where JupyterLab and Spark cluster(3) can access from it. JupyterLab will be an interface to access Spark cluster using Pyspark code(2).
 ## Implementation <a name="implementation"></a>
+This section describes how the Docker envrionment is built with custom images that are used to deploy the containers.
+### Create de docker images <a name="create"></a>
+We will create 5 images to deploy the Docker environment using Docker Compose:
+- **Base image**: This image is a simple linux distribution with Java 8, Python3, Pip and Scala installed. There is also created a volume that will be shared with all containers.
+- **JupyterLab image**: We use base image to build this image. Install and configure the JupyterLab IDE along with the Pyspark package.
+- **Spark base image**: We use base image to build this image. Install and configure Spark 3.3.0 version.
+- **Spark Master**: We use Spark base image to build this image. Export the ports of Web UI and master node. Set the entrypoint for the master class.
+- **Spark Worker**: We use Spark base image to build this image. Export the ports of worker node. Set the entrypoint for the worker class.  
 
+The following code snipets show the Dockerfile for the images described.
+
+#### Base image
+https://github.com/ShimabukuroA/file-processing-pipeline/blob/942997736b5218f573e5e2372f909a49fd04388f/docker/builds/base-container/Dockerfile#L1-L17
+#### JupyterLab image
+https://github.com/ShimabukuroA/file-processing-pipeline/blob/942997736b5218f573e5e2372f909a49fd04388f/docker/builds/jupyterlab/Dockerfile#L1-L14
+#### Spark base image
+https://github.com/ShimabukuroA/file-processing-pipeline/blob/942997736b5218f573e5e2372f909a49fd04388f/docker/builds/base-spark/Dockerfile#L1-L15
+#### Spark master image
+https://github.com/ShimabukuroA/file-processing-pipeline/blob/942997736b5218f573e5e2372f909a49fd04388f/docker/builds/spark-master/Dockerfile#L1-L7
+#### Spark worker image
+https://github.com/ShimabukuroA/file-processing-pipeline/blob/942997736b5218f573e5e2372f909a49fd04388f/docker/builds/spark-worker/Dockerfile#L1-L7
+### Build the Docker images <a name="build"></a>
+### Start containers <a name="start"></a>
+### Spark job <a name="job"></a>
 
 ## How to Run <a name="how2run"></a>
 
