@@ -106,7 +106,7 @@ https://github.com/ShimabukuroA/file-processing-pipeline/blob/6e494533a82c0e6922
 
 ### Spark job <a name="job"></a>
 With our JupyterLab IDE and Spark cluster up, we can run a pyspark job to process some data. A notebook was developed to guide through the steps that the job performs to process the events.  
-https://github.com/ShimabukuroA/file-processing-pipeline/blob/6e494533a82c0e6922e46a8350ca84cfe7e603a6/docker/docker-compose.yml#L1-L47
+https://github.com/ShimabukuroA/file-processing-pipeline/blob/8865dfea4ca7a5cdc672d31fb96856bbbfa0794d/docker/src/file_processing_pipeline.ipynb?short_path=de8d25c#L1-L3518
 ## How to Run <a name="how2run"></a>
 
 
