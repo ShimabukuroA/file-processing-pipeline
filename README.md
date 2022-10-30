@@ -70,7 +70,7 @@ The following table list tasks to do for the project.
 |TASK-01|High Level Design for the solution|<mark>**DONE**</mark>|[Commit link](https://github.com/ShimabukuroA/file-processing-pipeline/commit/cbe75647bda48033f6356213299a8b3d85d84e9f)|
 |TASK-02|Implement Docker environment to run the job|<mark>**DONE**</mark>|[Commit link](https://github.com/ShimabukuroA/file-processing-pipeline/commit/ac1638224eeaf80a266fcd7cb902b3c0d9ef5c6c)|
 |TASK-03|Implement the Pyspark job|<mark>**DONE**</mark>|[Commit link](https://github.com/ShimabukuroA/file-processing-pipeline/commit/63d9ec48f20b7f4ea9ae5ced9bd5f27ac9374f9c)|
-|TASK-04|Finish documentation|<mark>**DONE**</mark>||
+|TASK-04|Finish documentation|<mark>**DONE**</mark>|[Commit link](https://github.com/ShimabukuroA/file-processing-pipeline/commit/1a94ddae681164a2a3b23e4f742b3f245b7c74e9)|
 
 ## Solution <a name="solution"></a>
 
