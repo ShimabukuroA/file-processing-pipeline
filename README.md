@@ -144,9 +144,9 @@ Docker Compose version v2.12.2
 
 ## Implementation <a name="implementation"></a>
 This section describes how the Docker envrionment is built with custom images that are used to deploy the containers.
-### Create de docker images <a name="create"></a>
+### Create the docker images <a name="create"></a>
 We will create 5 images to deploy the Docker environment using Docker Compose:
-- **Base image**: This image is a simple linux distribution with Java 8, Python3, Pip and Scala installed. There is also created a volume that will be shared with all containers.
+- **Base image**: This image is a simple linux distribution with Java 8, Python3, Pip and Scala installed. We also create a volume that will be shared with all containers.
 - **JupyterLab image**: We use base image to build this image. Install and configure the JupyterLab IDE along with the Pyspark package.
 - **Spark base image**: We use base image to build this image. Install and configure Spark 3.3.0 version.
 - **Spark Master**: We use Spark base image to build this image. Export the ports of Web UI and master node. Set the entrypoint for the master class.
@@ -170,7 +170,7 @@ A shell script was developed to build all images at once.
 https://github.com/ShimabukuroA/file-processing-pipeline/blob/6e494533a82c0e6922e46a8350ca84cfe7e603a6/docker/build_containers_image.sh#L1-L37
 
 ### Start containers <a name="start"></a>
-The Docker compose file describes how to deploy the containers. We will create the JupyterLab and Spark cluster containers, define a expose their ports for network connection and share the volume between them.  
+The Docker compose file describes how to deploy the containers. We will create the JupyterLab and Spark cluster containers, define and expose their ports for network connection and share the volume between them.  
 https://github.com/ShimabukuroA/file-processing-pipeline/blob/6e494533a82c0e6922e46a8350ca84cfe7e603a6/docker/docker-compose.yml#L1-L47
 
 ### Spark job <a name="job"></a>
