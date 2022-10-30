@@ -152,7 +152,7 @@ We will create 5 images to deploy the Docker environment using Docker Compose:
 - **Spark Master**: We use Spark base image to build this image. Export the ports of Web UI and master node. Set the entrypoint for the master class.
 - **Spark Worker**: We use Spark base image to build this image. Export the ports of worker node. Set the entrypoint for the worker class.  
 
-The following code snipets show the Dockerfile for the images described.
+The following code snippets show the Dockerfile for the images described.
 
 #### Base image
 https://github.com/ShimabukuroA/file-processing-pipeline/blob/942997736b5218f573e5e2372f909a49fd04388f/docker/builds/base-container/Dockerfile#L1-L17
